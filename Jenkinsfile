@@ -17,13 +17,13 @@ pipeline {
         }
         stage ("DockerBuild") {
             steps {
-                dockerBuild('shaikmustafa/jenkins-shared', "${BUILD_NUMBER}")
+                dockerBuild('jagadishkumpati/jenkins-shared', "${BUILD_NUMBER}")
             }
         }
         stage ("DockerPush") {
             steps {
                 script {
-                    dockerPush('shaikmustafa/jenkins-shared', "${BUILD_NUMBER}")
+                    dockerPush('jagadishkumpati/jenkins-shared', "${BUILD_NUMBER}")
                 }
             }
         }
