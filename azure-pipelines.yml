@@ -16,3 +16,6 @@ steps:
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
+- task: CmdLine@2
+  inputs:
+    script: 'docker build -t myimg .'
