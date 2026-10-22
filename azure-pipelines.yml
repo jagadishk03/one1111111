@@ -16,11 +16,13 @@ steps:
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
+- task: CmdLine@2
+  inputs:
+    script: 'docker build -t jagadishkumpati/azurerepo:v2 .'
 - task: Docker@2
   inputs:
     containerRegistry: 'dockerconn'
     repository: 'jagadishkumpati/azurerepo'
-    command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
-    tags: 'v1'
+    command: 'push'
+    tags: 'v2'
 
