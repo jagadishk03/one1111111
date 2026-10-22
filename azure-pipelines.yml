@@ -24,4 +24,5 @@ steps:
     containerRegistry: 'dockerconn'
     repository: 'jagadishkumpati/azurerepo'
     command: 'push'
+    tags: 'today'
 
