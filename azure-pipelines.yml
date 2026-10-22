@@ -18,8 +18,10 @@ steps:
     sonarQubeRunAnalysis: false
 - task: CmdLine@2
   inputs:
-    script: 'docker build -t myimg .'
-
-- task: CmdLine@2
+    script: 'docker build -t jagadishkumpati/azurerepo .'
+- task: Docker@2
   inputs:
-    script: 'docker run -itd --name myapp -p 1111:8080 myimg'
+    containerRegistry: 'dockerconn'
+    repository: 'jagadishkumpati/azurerepo'
+    command: 'push'
+
