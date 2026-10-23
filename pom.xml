@@ -36,21 +36,21 @@
 
     <repositories>
              <repository>
-                    <id>flm-feed</id>
-                    <url>https://pkgs.dev.azure.com/afsanabegummd00/MyFirstProject/_packaging/flm-feed/maven/v1</url>
-                    <releases>
-                      <enabled>true</enabled>
-                      </releases>
-                      <snapshots>
-                               <enabled>true</enabled>
-                      </snapshots>
-              </repository>
+  <id>MyJackFeed</id>
+  <url>https://pkgs.dev.azure.com/jagadish802/MyNewProj/_packaging/MyJackFeed/maven/v1</url>
+  <releases>
+    <enabled>true</enabled>
+  </releases>
+  <snapshots>
+    <enabled>true</enabled>
+  </snapshots>
+</repository>
     </repositories>
 
     <distributionManagement>
             <repository>
-  <id>flm-feed</id>
-  <url>https://pkgs.dev.azure.com/afsanabegummd00/MyFirstProject/_packaging/flm-feed/maven/v1</url>
+  <id>MyJackFeed</id>
+  <url>https://pkgs.dev.azure.com/jagadish802/MyNewProj/_packaging/MyJackFeed/maven/v1</url>
   <releases>
     <enabled>true</enabled>
   </releases>
