@@ -36,3 +36,6 @@ jobs:
         with:
           name: java-artifact
           path: target/*.war
+          
+      - name: List Build Output
+        run: ls -ltr target/
