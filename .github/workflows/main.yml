@@ -39,3 +39,6 @@ jobs:
           
       - name: List Build Output
         run: ls -ltr target/
+        
+      - name: execute command
+        run: whoami
