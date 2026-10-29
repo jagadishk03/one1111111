@@ -49,3 +49,8 @@ jobs:
 
       - name: List Docker Images
         run: docker images
+
+      - name: Run container
+        run: |
+          docker run -d -p 8080:8080 my-java-app:latest
+          curl http://localhost:8080/health
