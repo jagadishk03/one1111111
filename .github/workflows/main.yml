@@ -11,7 +11,7 @@ on:
       - main
       - master
 
-  workflow_dispatch:
+  # workflow_dispatch:
 
 jobs:
   build:
@@ -42,3 +42,10 @@ jobs:
         
       - name: execute command
         run: whoami
+        
+      - name: Build Docker Image
+        run: |
+          docker build -t my-java-app:latest .
+
+      - name: List Docker Images
+        run: docker images
