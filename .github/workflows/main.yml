@@ -52,5 +52,9 @@ jobs:
 
       - name: Run container
         run: |
-          docker run -d -p 8080:8080 my-java-app:latest
-          curl http://localhost:8080/health
+          docker run -d --name myapp -p 8080:8080 my-java-app
+          sleep 30
+          curl http://localhost:8080/actuator/health
+
+      - name: Check Running Containers
+        run: docker ps -a
